@@ -7,14 +7,6 @@ body,
   background: #f0f2f5;
 }
 
-/* .ant-btn-primary {
-  color: #fff;
-  background: #666;
-  border-color: #666;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+.text-right{
+  text-align: right;
 }
-
-.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #000;
-} */

@@ -1,1 +1,19 @@
-@primary-color: #5327bb; // primary color for all components
+@primary-color: #228df1; // primary color for all components
+
+@media (max-width: @screen-sm) {
+    .hide-mobile {
+        display: none;
+    }
+    .margin-layout-mobile {
+        margin: 84px 16px 16px 16px;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .hide-desktop {
+        display: none;
+    }
+    .margin-layout-desktop {
+        margin: 84px 16px 16px 216px;
+    }
+}

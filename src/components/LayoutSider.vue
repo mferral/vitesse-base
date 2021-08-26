@@ -4,10 +4,14 @@ import {
   VideoCameraOutlined,
   UploadOutlined,
 } from '@ant-design/icons-vue'
-const selectedKeys = ref < string[] > (['1'])
+// @ts-ignore
+const router = useRouter()
+const page = router.currentRoute.value.path
+// @ts-ignore
+const selectedKeys = ref < string[] > ([page])
 </script>
 <template>
-  <a-layout-sider :style="{ overflow: 'auto', height: '100vh', position: 'fixed', zIndex: 2, left: 0 }">
+  <a-layout-sider :style="{ overflow: 'auto', height: '100vh', position: 'fixed', zIndex: 2, left: 0 }" class="hide-mobile">
     <div class="layout-profile">
       <a-avatar
         :size="100"
@@ -15,15 +19,15 @@ const selectedKeys = ref < string[] > (['1'])
       />
     </div>
     <a-menu v-model:selected-keys="selectedKeys" theme="dark" mode="inline">
-      <a-menu-item key="1" @click="$router.push('/')">
+      <a-menu-item key="/" @click="$router.push('/')">
         <user-outlined />
         <span> nav 1</span>
       </a-menu-item>
-      <a-menu-item key="2" @click="$router.push('/page-2')">
+      <a-menu-item key="/page-2" @click="$router.push('/page-2')">
         <video-camera-outlined />
         <span> nav 2</span>
       </a-menu-item>
-      <a-menu-item key="3" @click="$router.push('/page-3')">
+      <a-menu-item key="/children" @click="$router.push('/children')">
         <upload-outlined />
         <span> nav 3</span>
       </a-menu-item>
