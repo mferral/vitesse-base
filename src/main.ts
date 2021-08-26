@@ -3,7 +3,8 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
-
+// import 'ant-design-vue/dist/antd.css'
+import './styles/styles.css'
 import App from './App.vue'
 
 import './styles/main.css'

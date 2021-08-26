@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
-import ViteComponents from 'vite-plugin-components'
+import ViteComponents, { AntDesignVueResolver } from 'vite-plugin-components'
 import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
 
@@ -41,6 +41,7 @@ export default defineConfig({
     ViteComponents({
       globalComponentsDeclaration: true,
       customComponentResolvers: [
+        AntDesignVueResolver(),
         ViteIconsResolver({
           componentPrefix: '',
         }),
