@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
+import { createPinia } from 'pinia'
 // import 'ant-design-vue/dist/antd.css'
 import './styles/styles.css'
 import App from './App.vue'
@@ -10,6 +11,9 @@ import App from './App.vue'
 import './styles/main.css'
 
 const app = createApp(App)
+
+app.use(createPinia())
+
 const routes = setupLayouts(generatedRoutes)
 const router = createRouter({
   history: createWebHistory(),

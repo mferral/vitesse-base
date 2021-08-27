@@ -4,7 +4,7 @@ import {
   LogoutOutlined,
   MenuOutlined,
 } from '@ant-design/icons-vue'
-
+// @ts-ignore
 const visible = ref<boolean>(false)
 
 const afterVisibleChange = (bool: boolean) => {
